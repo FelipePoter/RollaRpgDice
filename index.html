@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll a RPG dice</title>
+</head>
+<body>
+
+    <style>
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+
+        button {
+            justify-content: space-evenly;
+            font-family: Verdana, Tahoma, sans-serif;
+            background-color: chartreuse;
+            color: antiquewhite;
+            border: none;
+            border-radius: 3px;
+        }
+
+    </style>
+
+    <h1>Roll a dice</h1>
+
+    <p id="number6"></p>
+    <p id="number20"></p>
+    <p id="number100"></p>
+
+    <center>
+    <button onclick="rollNumber6()">1 of 6</button>
+    <button onclick="rollNumber20()">1 of 20</button>
+    <button onclick="rollNumber100()">1 of 100</button>
+        </center>
+
+    <script>
+        const number6 = [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ]
+    
+        const number20 = [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+        ]
+       
+        const number100= [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100"
+        ]
+
+    function rollNumber6() {
+    var indice = Math.floor(Math.random() * number6.length);
+    document.getElementById("number6").textContent = number6[indice];
+    };
+
+    function rollNumber20() {
+    var indice = Math.floor(Math.random() * number20.length);
+    document.getElementById("number20").textContent = number20[indice];
+    };
+
+    function rollNumber100() {
+    var indice = Math.floor(Math.random() * number100.length);
+    document.getElementById("number100").textContent = number100[indice];
+    };
+
+    </script>
+</body>
+</html>
